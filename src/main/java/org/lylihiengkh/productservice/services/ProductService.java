@@ -11,5 +11,5 @@ public interface ProductService {
     void createProduct(ProductRequest req);
     void update(ProductRequest req);
     void delete(int id, ProductRequest req);
-    List<ProductResponse> getAllProductsByCategory(int categoryId);
+    List<ProductResponse> getAllProductsByCategoryId(int categoryId);
 }

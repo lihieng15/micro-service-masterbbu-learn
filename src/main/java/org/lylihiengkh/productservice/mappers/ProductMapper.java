@@ -5,11 +5,12 @@ import org.lylihiengkh.productservice.dto.response.ProductResponse;
 import org.lylihiengkh.productservice.entities.ProductEntity;
 import org.springframework.stereotype.Component;
 
+import java.util.Objects;
+
 @Component
 public class ProductMapper {
     public ProductEntity toEntity(ProductRequest request) {
         return ProductEntity.builder()
-                .id(request.getId())
                 .title(request.getTitle())
                 .description(request.getDescription())
                 .price(request.getPrice())
@@ -24,6 +25,8 @@ public class ProductMapper {
                 .description(response.getDescription())
                 .price(response.getPrice())
                 .discount(response.getDiscount())
+                .createdDate("")
+                .category(Objects.isNull(response.getCategory()) ? null : response.getCategory())
                 .build();
     }
 

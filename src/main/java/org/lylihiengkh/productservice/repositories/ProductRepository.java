@@ -9,7 +9,6 @@ import java.util.List;
 
 @Repository
 public interface ProductRepository extends JpaRepository<ProductEntity,Integer> {
-    //select * from products where category_id = ?
-
     List<ProductEntity> findAllByCategory_Id(int categoryId);
+    List<ProductEntity> findAllByCategory_IdOrderByIdDesc(int categoryId);
 }

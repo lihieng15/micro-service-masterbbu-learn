@@ -1,0 +1,12 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: product-service
+  datasource:
+    url: jdbc:postgresql://localhost:2677/dev_product_db
+    username: postgres
+    password: BBU@2026
+  jpa:
+    hibernate:
+      ddl-auto: update

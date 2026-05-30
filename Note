@@ -1,0 +1,3 @@
+-entity -> mapping model to table in database
+-dto
+    -request ->transfer
